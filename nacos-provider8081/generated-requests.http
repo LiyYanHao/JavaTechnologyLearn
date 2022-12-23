@@ -1,0 +1,6 @@
+
+### 直接请求服务提供者
+GET http://localhost:8081/payment/nacos/{{id}}
+
+### 通过消费者者请求
+GET http://localhost:8082/payment/nacos/{{id}}

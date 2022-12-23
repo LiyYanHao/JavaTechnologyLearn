@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.6.11</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.lyh</groupId>
+    <artifactId>JavaTechnologyLearn</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>nacos-provider8081</module>
+        <module>nacos-consumer8082</module>
+        <module>openfeign-consumer8083</module>
+        <module>nacos-config9001</module>
+        <module>sentinel8084</module>
+        <module>sentinel-openfeign8086</module>
+        <module>sentinel-openfeign8087</module>
+        <module>seata-order8088</module>
+        <module>seata-storage8089</module>
+        <module>seata-account8100</module>
+        <module>shardingsphere-jdbc8101</module> <!--shardingsphere 读写分离-->
+        <module>shardingsphere-jdbc8102-verticalSlice</module> <!--shardingsphere 垂直分片-->
+        <module>shardingsphere-jdbc8103-horizontalSlice</module> <!--shardingsphere 水平切分-->
+        <module>shardingSphere-proxy8104</module>
+        <module>JavaVirtualMachine-8105</module>
+    </modules>
+
+</project>

@@ -1,0 +1,53 @@
+
+server:
+  port: 8089
+
+spring:
+  application:
+    name: seata-storage8089
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.139.20:8848
+        group: SEATA_GROUP
+      server-addr: 192.168.139.20:8848
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.139.20:3306/seata_storage
+    username: root
+    password: admin
+
+
+logging:
+  level:
+    io:
+      seata: info
+seata:
+  enable: true
+  tx-service-group: default_tx_group
+  registry:
+    type: nacos
+    nacos:
+      # 非本地请修改具体的地址
+      server-addr: http://192.168.139.20:8848
+      group: SEATA_GROUP
+      application: seata-server
+  service:
+    disable-global-transaction: false
+    vgroupMapping:
+      default_tx_group: default
+  config:
+    type: nacos
+    nacos:
+      # nacos ip地址
+      server-addr: http://192.168.139.20:8848
+      group: SEATA_GROUP
+      data-id: "seataServer.properties"
+mybatis:
+  mapperLocations: classpath:mapper/*.xml
+console:
+  user:
+    username: seata #seata-Web管理系统账号密码
+    password: seata
+
